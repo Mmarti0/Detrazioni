@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Detrazioni Fiscali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolo Detrazioni Fiscali</h1>
+
+        <div id="credito-commerciale">
+            <h2>Crediti Commerciali</h2>
+            <label for="credito-importo">Importo dei Crediti Commerciali (€):</label>
+            <input type="number" id="credito-importo" required>
+            
+            <label for="fondo-svalutazione">Fondo Svalutazione Crediti (€):</label>
+            <input type="number" id="fondo-svalutazione" required>
+            
+            <label for="svalutazione-bilancio">Svalutazione in Bilancio (€):</label>
+            <input type="number" id="svalutazione-bilancio" required>
+        </div>
+
+        <div id="manutenzione">
+            <h2>Manutenzione Beni</h2>
+            <label for="beni-materiali">Beni Materiali (€):</label>
+            <input type="number" id="beni-materiali" required>
+
+            <label for="beni-manutenzione">Beni con Contratti di Manutenzione (€):</label>
+            <input type="number" id="beni-manutenzione" required>
+
+            <label for="spesa-bilancio">Spesa in Bilancio (€):</label>
+            <input type="number" id="spesa-bilancio" required>
+
+            <label for="spese-esercizio">Spese di Competenza dell'Esercizio (€):</label>
+            <input type="number" id="spese-esercizio" required>
+        </div>
+
+        <button id="calcola" onclick="calcolaDetrazioni()">Calcola Detrazione</button>
+
+        <div id="risultato">
+            <h3>Risultato:</h3>
+            <p id="msg-risultato"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
