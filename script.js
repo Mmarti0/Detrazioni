@@ -12,6 +12,12 @@ function calcolaDetrazioni() {
     let totalePlusvalenze = parseFloat(document.getElementById("totale-plusvalenze").value);
     let anniRateizzazione = parseFloat(document.getElementById("anni-rateizzazione").value);
 
+    // Verifica che gli anni di rateizzazione non siano superiori a 5
+    if (anniRateizzazione > 5) {
+        document.getElementById("msg-risultato").innerText = "Errore: la rateizzazione può essere effettuata al massimo su 5 anni.";
+        return;
+    }
+
     // Calcolo per i crediti commerciali
     let cinquePercentoCredito = creditoImporto * 0.05;
     
